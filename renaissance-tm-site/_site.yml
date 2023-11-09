@@ -1,0 +1,13 @@
+name: "renaissance-tm"
+title: "Renaissance Topic Modeling"
+theme: tidymodels.css
+description: |
+  Renaissance Topic Modeling
+output_dir: "docs"
+navbar:
+  right:
+    - text: "Home"
+      href: index.html
+    - text: "About"
+      href: about.html
+output: distill::distill_article

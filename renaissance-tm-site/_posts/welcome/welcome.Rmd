@@ -1,0 +1,87 @@
+---
+title: "A (Not Entirely Novel) Problem with No Definitive Solutions"
+description: |
+  How can we extract meaningful information from a corpora of Renaissance texts using topic modeling?
+author:
+  - name: Cassidy All
+    affiliation: University of Colorado Boulder
+    affiliation_url: https://example.com/spacelysprokets
+date: 09-27-2023
+bibliography: sample.bib
+csl: ieee.csl
+output:
+  distill::distill_article:
+    toc: true
+    self_contained: false
+---
+
+# Introduction
+
+Digital humanities work promises researchers access to unthinkably large corpora spanning upwards of 278,000 books @gao2020 and 300 billion words @goldberg2013. Computer scientists have effectively used these corpora to train increasingly-powerful Artificial Intelligence (AI) models. However, many of the insights in these corpora remain inscrutable to human researchers.
+
+Blei @blei2012 and others have described some of the valuable research which can arise from corpora-level analysis centered in the humanities. Corpora-level analysis allows researchers to examine the evolution of texts over time; search for specific topics; understand the influence of authorship, provenance, and other non-contextual features on literature's themes; and more.
+
+A major tool in doing this digital humanities work is topic modeling^[A probabilistic approach to generating groups of words and phrases from a collection of texts.], however, its difficulty represents a major stumbling block for new and experienced scholars alike. Broadly, we consider the motivations of topic modeling, adapted from @batmanghelich2018, to be:
+
+  * **Organizing** documents into thematic categories
+  * **Designing** categories with appropriate levels of granularity and abstractness
+  * **Describing** the evolution of those categories over time
+  * **Enabling** a domain expert to analyze and understand the content
+  * **Finding** relationships between categories
+  * **Understanding** how authorship, origin, and other contextual features influence content
+
+## Metaphors, Irony, and Context
+
+Corpora of historical literature share much of the same problem space as more modern corpora, however, they also present unique challenges.
+
+## Our Corpus
+
+To explore race and politics in Renaissance literature&mdash;as well as develop new methods in the digital humanities&mdash;we are utilizing the [Visualizing English Print](https://graphics.cs.wisc.edu/WP/vep/vep-tcp-collection/) corpus with standardized spellings generated from texts released by the [Text Creation Partnership](https://textcreationpartnership.org/) as part of the [Early English Books Online](https://quod.lib.umich.edu/e/eebogroup/) corpus.
+
+It contains ____ from ___ to ___ and ___ unique words. Explore some of the collection's metadata below.
+
+```{r, layout="l-body-outset", echo=FALSE}
+library(rmarkdown)
+library(readr)
+vep_metadata <- read_csv('EEBOTCP1.csv',show_col_types = FALSE)
+vep_metadata <- vep_metadata[,c("Title","Date","Author","Pages","Terms")]
+paged_table(vep_metadata,options = list(rows.print = 5, max.print = 30000))
+```
+
+## “Wishlist” for topic models
+
+* Choosing an optimal number (K) of topics
+* Coherent, distinct, and, non-ambiguous topics
+* Reasonable compute time for mid-size(?) corpora
+* Contextual understandings of KWIC
+
+## Better Evaluation
+
+What's going on?
+
+
+# Research Directions
+
+## Specific Work
+
+* Produce ground truth corpus
+* Understand race, politics over time
+
+## Broad Contributions
+* Conduct a comprehensive review of major research directions in topic modeling as they apply to the analysis of historical corpora
+* Design and evaluate ensemble models
+* Explore and design evaluation metrics from multistakeholder perspectives
+* Improve the computational efficiency of the Top2Vec library
+* Contribute to TopModel, OCTIS, and other topic modeling frameworks
+* Develop new models and a set of best practices for understanding metaphor, irony, and other context-dependent phrases
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+# Learn more about creating blogs with Distill at:
+# https://rstudio.github.io/distill/blog.html
+
+```
+
+
+

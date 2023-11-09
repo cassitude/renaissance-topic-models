@@ -1,0 +1,20 @@
+{
+  "articles": [
+    {
+      "path": "about.html",
+      "title": "About this blog",
+      "description": "Some additional details about the blog",
+      "author": [],
+      "contents": "\n\n\n\n",
+      "last_modified": "2023-09-27T13:45:56-06:00"
+    },
+    {
+      "path": "index.html",
+      "title": "Renaissance Topic Modeling",
+      "author": [],
+      "contents": "\n\n\n\n",
+      "last_modified": "2023-09-27T13:45:57-06:00"
+    }
+  ],
+  "collections": ["posts/posts.json"]
+}
